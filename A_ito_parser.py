@@ -3,11 +3,11 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 # item = '8250u'
-# url = f'https://www.avito.ru/moskva/noutbuki?f=ASgCAQECAUCo5A1E0Nlm1NlmwNlmttlmAUXGmgwZeyJmcm9tIjoxMjgwMCwidG8iOjMzNzAwfQ&geoCoords=55.715297%2C37.564529&q={item}+-%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D0%B8+-ddr3+-%2215.6%22&radius=25&searchRadius=25&user=1'
+# url = f''
 
 
 
-url = 'https://www.avito.ru'
+url = ''
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
 
 response = requests.get(url, headers=headers)
