@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from config import PARS_LINK_PT1, PARS_LINK_PT2
 
 driver_path = 'C:\PyProjects\data_analysis\dafiles\chromedriver\chromedriver'
 
@@ -45,7 +46,7 @@ def process_csv(input_file, output_file):
         rows = list(reader)
 
         for row in rows:
-            url = f'https://www.{row[2]}+-%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D0%B8+-ddr3+-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80+-%D1%81%D0%BA%D0%BB%D0%B0%D0%B4+-%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B0+-buy+-%D1%80%D0%B0%D0%B4%D1%8B+-%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD&radius=25&searchRadius=25&user=1'
+            url = f'{PARS_LINK_PT1}{row[2]}{PARS_LINK_PT2}'
             parsed_value = parse_element(url)
             row.append(parsed_value)
 
