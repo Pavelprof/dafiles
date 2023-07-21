@@ -1,2 +1,3 @@
 chromedriver/
 .ipynb_checkpoints/
+/config.py
