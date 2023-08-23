@@ -1,7 +1,7 @@
 import yfinance as yf
 
-rwj = yf.Ticker("RWJ")
+tkrs = yf.download(["RWJ", "GOOGL"], period="1m")
+current_prices_series = tkrs['Adj Close'].iloc[-1]
+current_prices_dict = current_prices_series.to_dict()
 
-current_price = rwj.history(period="1d")["Close"].iloc[0]
-
-print(current_price)
+print(current_prices_dict)
