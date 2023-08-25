@@ -5,13 +5,13 @@ def get_quotes_from_binance(ticker_list):
     quotes = {}
 
     for ticker in ticker_list:
-        response = requests.get(base_url, params={"symbol": ticker})
+        response = requests.get(base_url, params={"symbol": ticker+'USDT'})
         data = response.json()
         if 'symbol' in data and 'price' in data:
-            quotes[data['symbol']] = float(data['price'])
+            quotes[ticker] = float(data['price'])
 
     return quotes
 
-ticker_list = ["BTCUSDT", "ETHUSDT", "XRPUSDT"]
+ticker_list = ["BTC", "ETH", "XRP"]
 
 print(get_quotes_from_binance(ticker_list))
