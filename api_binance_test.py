@@ -8,7 +8,7 @@ def get_quotes_from_binance(ticker_list):
         response = requests.get(base_url, params={"symbol": ticker+'USDT'})
         data = response.json()
         if 'symbol' in data and 'price' in data:
-            quotes[ticker] = float(data['price'])
+            quotes[ticker] = {'price': float(data['price']), 'currency': 'USD'}
 
     return quotes
 
