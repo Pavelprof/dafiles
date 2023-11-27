@@ -12,6 +12,6 @@ def get_quotes_from_binance(ticker_list):
 
     return quotes
 
-ticker_list = ["AVAX"]
+ticker_list = ["ETHW"]
 
 print(get_quotes_from_binance(ticker_list))
